@@ -1,0 +1,192 @@
+:root {
+  --main-header-text-color: rgb(119, 119, 123);
+  --border-color: rgb(236, 236, 236);
+  --shadow-color: rgb(236, 236, 236);
+  --table-header-text-color: rgb(119, 119, 119);
+  --item-text-color: rgb(91, 91, 95);
+  --edit-button-background-color: rgb(244, 244, 244);
+  --summary-header-background-color: rgb(245, 245, 245);
+  --summary-costs-background-color: rgb(251, 251, 251);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.shipping-cart {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: start;
+  justify-items: start;
+  margin: 2vh 5vw;
+  /*padding: 0 5rem;*/
+}
+
+.shipping-cart__main {
+  margin-right: 1rem;
+  justify-self: stretch;
+}
+
+.shipping-cart__header {
+  display: inline-block;
+  font-weight: normal;
+  color: var(--main-header-text-color);
+  margin: 1rem 0;
+  font-size: 1.5em;
+}
+
+.shipping-cart__header_button {
+  justify-self: end;
+  margin: 1rem 0 2rem;
+}
+
+.shipping-cart__main__table {
+  border: 1px solid var(--border-color);
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 5px 1px var(--shadow-color);
+  -moz-box-shadow: 0 2px 5px 1px var(--shadow-color);
+  -webkit-box-shadow: 0 2px 5px 1px var(--shadow-color);
+}
+
+.shipping-cart__main__table__header__row,
+.shipping-cart__main__table__body__item-row {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.shipping-cart__main__table__header__row {
+  font-weight: bold;
+  padding-bottom: 0;
+  color: var(--table-header-text-color);
+}
+
+.shipping-cart__main__table__body__item-row {
+  color: var(--item-text-color);
+}
+
+.shipping-cart__main__table__header__row > th,
+.shipping-cart__main__table__body__item-row > td {
+  padding: 1rem;
+}
+
+.shipping-cart__main__table__body__item-row > td:last-child {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+}
+
+.shipping-cart__main__table__body__item-row__input {
+  width: 35px;
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 35px;
+  outline: none;
+  text-align: center;
+}
+
+.shipping-cart__main__table__last-row {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  padding: 1rem;
+}
+
+.btn-action {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1em;
+}
+
+.btn-action--bold {
+  font-weight: bold;
+}
+
+.btn-edit {
+  color: #000000;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  background-color: var(--edit-button-background-color);
+  outline: none;
+}
+
+.shipping-cart__summary {
+  justify-self: stretch;
+  margin: 0 0 0 1rem;
+}
+
+.shipping-cart__summary__top {
+  text-align: right;
+}
+
+.shipping-cart__summary__shipping {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  background-color: var(--summary-header-background-color);
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+
+.shipping-cart__summary__shipping__value {
+  text-align: right;
+}
+
+.shipping-cart__summary__costs {
+  background-color: var(--summary-costs-background-color);
+  width: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border-color);
+}
+
+.shipping-cart__summary__costs__header {
+  font-weight: bold;
+  grid-column: span 2;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--summary-header-background-color);
+}
+
+
+.shipping-cart__summary__costs__subtotal__label,
+.shipping-cart__summary__costs__subtotal__value {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.shipping-cart__summary__costs__grand-total__value {
+  font-size: 1.2rem;
+}
+
+.shipping-cart__summary__costs__subtotal__label,
+.shipping-cart__summary__costs__grand-total__label {
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.shipping-cart__summary__costs__subtotal__value,
+.shipping-cart__summary__costs__grand-total__value {
+  text-align: right;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+
+.shipping-cart__summary__costs__button {
+  grid-column: span 2;
+  margin: 1rem;
+}
