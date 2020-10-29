@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.shipping-cart {
+.shopping-cart {
   display: grid;
   grid-template-columns: 4fr 1fr;
   align-items: start;
@@ -22,12 +22,12 @@ body {
   /*padding: 0 5rem;*/
 }
 
-.shipping-cart__main {
+.shopping-cart__main {
   margin-right: 1rem;
   justify-self: stretch;
 }
 
-.shipping-cart__header {
+.shopping-cart__header {
   display: inline-block;
   font-weight: normal;
   color: var(--main-header-text-color);
@@ -35,12 +35,12 @@ body {
   font-size: 1.5em;
 }
 
-.shipping-cart__header_button {
+.shopping-cart__header_button {
   justify-self: end;
   margin: 1rem 0 2rem;
 }
 
-.shipping-cart__main__table {
+.shopping-cart__main__table {
   border: 1px solid var(--border-color);
   width: 100%;
   padding: 1rem;
@@ -49,8 +49,8 @@ body {
   -webkit-box-shadow: 0 2px 5px 1px var(--shadow-color);
 }
 
-.shipping-cart__main__table__header__row,
-.shipping-cart__main__table__body__item-row {
+.shopping-cart__main__table__header__row,
+.shopping-cart__main__table__body__item-row {
   display: grid;
   grid-template-columns: 100px 2fr 1fr 1fr 1fr;
   align-items: center;
@@ -59,28 +59,28 @@ body {
   padding: 1rem 2rem 1rem 1rem;
 }
 
-.shipping-cart__main__table__header__row {
+.shopping-cart__main__table__header__row {
   font-weight: bold;
   padding-bottom: 0;
   color: var(--table-header-text-color);
 }
 
-.shipping-cart__main__table__body__item-row {
+.shopping-cart__main__table__body__item-row {
   color: var(--item-text-color);
 }
 
-.shipping-cart__main__table__header__row > th,
-.shipping-cart__main__table__body__item-row > td {
+.shopping-cart__main__table__header__row > th,
+.shopping-cart__main__table__body__item-row > td {
   padding: 1rem;
 }
 
-.shipping-cart__main__table__body__item-row > td:last-child {
+.shopping-cart__main__table__body__item-row > td:last-child {
   display: grid;
   grid-template-columns: repeat(4, auto);
   align-items: center;
 }
 
-.shipping-cart__main__table__body__item-row__input {
+.shopping-cart__main__table__body__item-row__input {
   width: 35px;
   border-radius: 0;
   box-sizing: border-box;
@@ -89,7 +89,7 @@ body {
   text-align: center;
 }
 
-.shipping-cart__main__table__last-row {
+.shopping-cart__main__table__last-row {
   display: grid;
   align-items: center;
   justify-items: end;
@@ -125,16 +125,16 @@ body {
   outline: none;
 }
 
-.shipping-cart__summary {
+.shopping-cart__summary {
   justify-self: stretch;
   margin: 0 0 0 1rem;
 }
 
-.shipping-cart__summary__top {
+.shopping-cart__summary__top {
   text-align: right;
 }
 
-.shipping-cart__summary__shipping {
+.shopping-cart__summary__shipping {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: stretch;
@@ -146,11 +146,11 @@ body {
 }
 
 
-.shipping-cart__summary__shipping__value {
+.shopping-cart__summary__shipping__value {
   text-align: right;
 }
 
-.shipping-cart__summary__costs {
+.shopping-cart__summary__costs {
   background-color: var(--summary-costs-background-color);
   width: auto;
   display: grid;
@@ -159,7 +159,7 @@ body {
   border: 1px solid var(--border-color);
 }
 
-.shipping-cart__summary__costs__header {
+.shopping-cart__summary__costs__header {
   font-weight: bold;
   grid-column: span 2;
   padding: 0.5rem 1rem;
@@ -168,23 +168,23 @@ body {
 }
 
 
-.shipping-cart__summary__costs__subtotal__label,
-.shipping-cart__summary__costs__subtotal__value {
+.shopping-cart__summary__costs__subtotal__label,
+.shopping-cart__summary__costs__subtotal__value {
   border-bottom: 1px solid var(--border-color);
 }
 
-.shipping-cart__summary__costs__grand-total__value {
+.shopping-cart__summary__costs__grand-total__value {
   font-size: 1.2rem;
 }
 
-.shipping-cart__summary__costs__subtotal__label,
-.shipping-cart__summary__costs__grand-total__label {
+.shopping-cart__summary__costs__subtotal__label,
+.shopping-cart__summary__costs__grand-total__label {
   margin-left: 1rem;
   padding: 1rem;
 }
 
-.shipping-cart__summary__costs__subtotal__value,
-.shipping-cart__summary__costs__grand-total__value {
+.shopping-cart__summary__costs__subtotal__value,
+.shopping-cart__summary__costs__grand-total__value {
   text-align: right;
   font-weight: bold;
   margin-right: 1rem;
@@ -192,7 +192,7 @@ body {
 }
 
 
-.shipping-cart__summary__costs__button {
+.shopping-cart__summary__costs__button {
   grid-column: span 2;
   margin: 1rem;
 }

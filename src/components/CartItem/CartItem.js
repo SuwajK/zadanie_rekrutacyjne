@@ -31,7 +31,7 @@ const CartItem = ({itemName, itemImage, price, quantity, updateQuantity, deleteI
   }
 
   return (
-    <tr className="shipping-cart__main__table__body__item-row">
+    <tr className="shopping-cart__main__table__body__item-row">
       <td>
         <button className="btn-invisible" onClick={handleDelete}>
         <img src={xImg} alt="Delete item"/>
@@ -46,7 +46,7 @@ const CartItem = ({itemName, itemImage, price, quantity, updateQuantity, deleteI
         <button className="btn-edit" onClick={decreaseCount}>-</button>
         <input
           type="text"
-          className="shipping-cart__main__table__body__item-row__input"
+          className="shopping-cart__main__table__body__item-row__input"
           value={quantity}
           onChange={handleInput}
         />
@@ -54,7 +54,7 @@ const CartItem = ({itemName, itemImage, price, quantity, updateQuantity, deleteI
         <button className="btn-invisible" onClick={handleEditButtonClick}>
         <img src={editImg}
              alt="Edit"
-             className="shipping-cart__main__table__body__item-row__image"/>
+             className="shopping-cart__main__table__body__item-row__image"/>
         </button>
       </td>
     </tr>

@@ -31,13 +31,13 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
   }
 
   return (
-    <div className="shipping-cart">
-      <h1 className="shipping-cart__header">Shopping Cart</h1>
-      <button className="shipping-cart__header_button btn-action" onClick={nextStep}>Proceed to checkout</button>
-      <main className="shipping-cart__main">
-        <table className="shipping-cart__main__table">
-          <thead className="shipping-cart__main__table__header">
-          <tr className="shipping-cart__main__table__header__row">
+    <div className="shopping-cart">
+      <h1 className="shopping-cart__header">Shopping Cart</h1>
+      <button className="shopping-cart__header_button btn-action" onClick={nextStep}>Proceed to checkout</button>
+      <main className="shopping-cart__main">
+        <table className="shopping-cart__main__table">
+          <thead className="shopping-cart__main__table__header">
+          <tr className="shopping-cart__main__table__header__row">
             <th></th>
             <th></th>
             <th>Product Name</th>
@@ -45,12 +45,12 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
             <th>Qty</th>
           </tr>
           </thead>
-          <tbody className="shipping-cart__main__table__body">
+          <tbody className="shopping-cart__main__table__body">
           {items && items.map((itemProps, index) =>
             <CartItem {...itemProps} key={index} deleteItem={deleteItem} updateQuantity={updateItemQuantity}
                       calculatePrices={calculatePrices}/>
           )}
-          <tr className="shipping-cart__main__table__last-row">
+          <tr className="shopping-cart__main__table__last-row">
             <td>
               <button className="btn-action btn-action--bold" onClick={calculatePrices}>Update Shopping Cart</button>
             </td>
@@ -58,20 +58,20 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
           </tbody>
         </table>
       </main>
-      <aside className="shipping-cart__summary">
-        <p className="shipping-cart__summary__shipping">
-          <span className="shipping-cart__summary__shipping__label">SHIPPING</span>
-          <span className="shipping-cart__summary__shipping__value">${shippingCost.toFixed(2)}</span>
+      <aside className="shopping-cart__summary">
+        <p className="shopping-cart__summary__shipping">
+          <span className="shopping-cart__summary__shipping__label">SHIPPING</span>
+          <span className="shopping-cart__summary__shipping__value">${shippingCost.toFixed(2)}</span>
         </p>
-        <p className="shipping-cart__summary__costs">
-          <span className="shipping-cart__summary__costs__header">CART TOTALS</span>
-          <span className="shipping-cart__summary__costs__subtotal__label">Subtotal</span>
-          <span className="shipping-cart__summary__costs__subtotal__value">${subTotalCost.toFixed(2)}</span>
-          <span className="shipping-cart__summary__costs__grand-total__label">Grand Total</span>
-          <span className="shipping-cart__summary__costs__grand-total__value">
+        <p className="shopping-cart__summary__costs">
+          <span className="shopping-cart__summary__costs__header">CART TOTALS</span>
+          <span className="shopping-cart__summary__costs__subtotal__label">Subtotal</span>
+          <span className="shopping-cart__summary__costs__subtotal__value">${subTotalCost.toFixed(2)}</span>
+          <span className="shopping-cart__summary__costs__grand-total__label">Grand Total</span>
+          <span className="shopping-cart__summary__costs__grand-total__value">
             ${(subTotalCost + shippingCost).toFixed(2)}
           </span>
-          <button className="shipping-cart__summary__costs__button btn-action btn-action--bold"
+          <button className="shopping-cart__summary__costs__button btn-action btn-action--bold"
                   onClick={nextStep}>
             Proceed to checkout
           </button>
