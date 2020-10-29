@@ -7,7 +7,7 @@
 }
 
 .shopping-cart__main {
-  margin-right: 1rem;
+  margin: 0 1rem;
   justify-self: stretch;
 }
 
@@ -15,7 +15,7 @@
   display: inline-block;
   font-weight: normal;
   color: var(--main-header-text-color);
-  margin: 1rem 0;
+  margin: 1rem;
   font-size: 1.5em;
 }
 
@@ -85,3 +85,23 @@
   margin: 0 0 0 1rem;
 }
 
+@media (max-width: 1000px) {
+  .shopping-cart {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    /*align-items: start;*/
+    justify-items: center;
+    margin: 0;
+  }
+
+  .shopping-cart__summary {
+    justify-self: stretch;
+    margin: 1rem;
+  }
+
+  .shopping-cart__header_button {
+    justify-self: stretch;
+    margin: 1rem;
+  }
+}
