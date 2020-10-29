@@ -1,0 +1,66 @@
+.shopping-cart__summary__top {
+  text-align: right;
+}
+
+.shopping-cart__summary__shipping {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  background-color: var(--summary-header-background-color);
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+
+.shopping-cart__summary__shipping__value {
+  text-align: right;
+}
+
+.shopping-cart__summary__costs {
+  background-color: var(--summary-costs-background-color);
+  width: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border-color);
+}
+
+.shopping-cart__summary__costs__header {
+  font-weight: bold;
+  grid-column: span 2;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--summary-header-background-color);
+}
+
+
+.shopping-cart__summary__costs__subtotal__label,
+.shopping-cart__summary__costs__subtotal__value {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.shopping-cart__summary__costs__grand-total__value {
+  font-size: 1.2rem;
+}
+
+.shopping-cart__summary__costs__subtotal__label,
+.shopping-cart__summary__costs__grand-total__label {
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.shopping-cart__summary__costs__subtotal__value,
+.shopping-cart__summary__costs__grand-total__value {
+  text-align: right;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+
+.shopping-cart__summary__costs__button {
+  grid-column: span 2;
+  margin: 1rem;
+}

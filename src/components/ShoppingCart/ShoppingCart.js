@@ -1,6 +1,7 @@
 import React from "react";
 import CartItem from "./../CartItem";
-import './../../styles.css'
+import './ShoppingCart.css'
+import Summary from "../Summary";
 
 
 const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingCost, nextStep}) => {
@@ -47,7 +48,10 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
           </thead>
           <tbody className="shopping-cart__main__table__body">
           {items && items.map((itemProps, index) =>
-            <CartItem {...itemProps} key={index} deleteItem={deleteItem} updateQuantity={updateItemQuantity}
+            <CartItem {...itemProps}
+                      key={index}
+                      deleteItem={deleteItem}
+                      updateQuantity={updateItemQuantity}
                       calculatePrices={calculatePrices}/>
           )}
           <tr className="shopping-cart__main__table__last-row">
@@ -59,23 +63,7 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
         </table>
       </main>
       <aside className="shopping-cart__summary">
-        <p className="shopping-cart__summary__shipping">
-          <span className="shopping-cart__summary__shipping__label">SHIPPING</span>
-          <span className="shopping-cart__summary__shipping__value">${shippingCost.toFixed(2)}</span>
-        </p>
-        <p className="shopping-cart__summary__costs">
-          <span className="shopping-cart__summary__costs__header">CART TOTALS</span>
-          <span className="shopping-cart__summary__costs__subtotal__label">Subtotal</span>
-          <span className="shopping-cart__summary__costs__subtotal__value">${subTotalCost.toFixed(2)}</span>
-          <span className="shopping-cart__summary__costs__grand-total__label">Grand Total</span>
-          <span className="shopping-cart__summary__costs__grand-total__value">
-            ${(subTotalCost + shippingCost).toFixed(2)}
-          </span>
-          <button className="shopping-cart__summary__costs__button btn-action btn-action--bold"
-                  onClick={nextStep}>
-            Proceed to checkout
-          </button>
-        </p>
+        <Summary subTotalCost={subTotalCost} shippingCost={shippingCost} nextStep={nextStep}/>
       </aside>
     </div>
   );
