@@ -4,7 +4,7 @@ import './ShoppingCart.css'
 import Summary from "../Summary";
 
 
-const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingCost, nextStep}) => {
+const ShoppingCart = ({items, setItems, calculatePrices, subTotalCost, shippingCost, nextStep}) => {
 
   const deleteItem = (itemName) => {
     setItems(prevState => prevState.filter(
@@ -19,16 +19,6 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
         : item
       )
     })
-  }
-
-  const calculatePrices = () => {
-    if (items) {
-      let cost = 0;
-      items.forEach(item => {
-        cost += item.quantity * item.price
-      })
-      setSubTotalCost(cost)
-    }
   }
 
   return (

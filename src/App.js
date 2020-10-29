@@ -6,7 +6,6 @@ import headphones from './static/images/headphones.png'
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
 
-
 function App() {
 
   const [items, setItems] = useState([
@@ -23,6 +22,22 @@ function App() {
     }
     , [subTotalCost])
 
+  useEffect(() => calculatePrices(),
+    /* Calculate price when items amount changes (does not trigger when quantity changes) */
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [items.length]
+  )
+
+  const calculatePrices = () => {
+    let cost = 0;
+    if (items) {
+      items.forEach(item => {
+        cost += item.quantity * item.price
+      })
+    }
+    setSubTotalCost(cost)
+  }
+
   const checkout = () => {
     setIsFinished(true)
   }
@@ -34,10 +49,9 @@ function App() {
         : <ShoppingCart
           items={items}
           setItems={setItems}
+          calculatePrices={calculatePrices}
           subTotalCost={subTotalCost}
-          setSubTotalCost={setSubTotalCost}
           shippingCost={shippingCost}
-          setShippingCost={setShippingCost}
           nextStep={checkout}
         />
       }
