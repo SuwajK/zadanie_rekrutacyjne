@@ -1,5 +1,5 @@
 import React from 'react'
-import './summary.css'
+import './summary.scss'
 
 const Summary = ({subTotalCost, shippingCost, nextStep}) => {
 

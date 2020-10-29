@@ -1,0 +1,110 @@
+@import '../../static/styles/common';
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: start;
+  justify-items: start;
+  margin: 2vh 5vw;
+
+  &__main {
+    margin: 0 1rem;
+    justify-self: stretch;
+  }
+
+  &__header {
+    display: inline-block;
+    font-weight: normal;
+    color: $main-header-text-color;
+    margin: 1rem;
+    font-size: 1.5em;
+
+    &_button {
+      justify-self: end;
+      margin: 1rem 0 2rem;
+    }
+  }
+
+  &__main__table {
+    border: 1px solid $border-color;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 5px 1px $shadow-color;
+    -moz-box-shadow: 0 2px 5px 1px $shadow-color;
+    -webkit-box-shadow: 0 2px 5px 1px $shadow-color;
+
+    &__header__row,
+    &__body__item-row {
+      display: grid;
+      grid-template-columns: 100px 2fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-items: start;
+      border-bottom: 1px solid $border-color;
+      padding: 1rem 2rem 1rem 1rem;
+
+      th,
+      td {
+        padding: 1rem;
+      }
+    }
+
+    &__header__row {
+      font-weight: bold;
+      padding-bottom: 0;
+      color: $table-header-text-color;
+    }
+
+    &__body__item-row {
+      color: $item-text-color;
+
+      td:last-child {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        align-items: center;
+      }
+
+      &__input {
+        width: 35px;
+        border-radius: 0;
+        box-sizing: border-box;
+        height: 35px;
+        outline: none;
+        text-align: center;
+      }
+    }
+
+    &__last-row {
+      display: grid;
+      align-items: center;
+      justify-items: end;
+      padding: 1rem;
+    }
+
+  }
+
+  &__summary {
+    justify-self: stretch;
+    margin: 0 0 0 1rem;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .shopping-cart {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 0;
+
+    &__summary {
+      justify-self: stretch;
+      margin: 1rem;
+    }
+
+    &__header_button {
+      justify-self: stretch;
+      margin: 1rem;
+    }
+  }
+}

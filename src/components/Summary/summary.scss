@@ -1,0 +1,67 @@
+@import '../../static/styles/common';
+
+.shopping-cart__summary {
+  &__top {
+    text-align: right;
+  }
+
+  &__shipping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    background-color: $summary-header-background-color;
+    font-weight: bold;
+    border: 1px solid $border-color;
+    padding: 0.5rem 1rem;
+    margin: 0;
+
+    &__value {
+      text-align: right;
+    }
+  }
+
+  &__costs {
+    background-color: $summary-costs-background-color;
+    width: auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid $border-color;
+
+    &__header {
+      font-weight: bold;
+      grid-column: span 2;
+      padding: 0.5rem 1rem;
+      border: 1px solid $border-color;
+      background-color: $summary-header-background-color;
+    }
+
+    &__subtotal__label,
+    &__subtotal__value {
+      border-bottom: 1px solid $border-color;
+    }
+
+    &__grand-total__value {
+      font-size: 1.2rem;
+    }
+
+    &__subtotal__label,
+    &__grand-total__label {
+      margin-left: 1rem;
+      padding: 1rem;
+    }
+
+    &__subtotal__value,
+    &__grand-total__value {
+      text-align: right;
+      font-weight: bold;
+      margin-right: 1rem;
+      padding: 1rem;
+    }
+
+    &__button {
+      grid-column: span 2;
+      margin: 1rem;
+    }
+  }
+}

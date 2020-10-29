@@ -1,6 +1,6 @@
 import React from "react";
 import CartItem from "./../CartItem";
-import './ShoppingCart.css'
+import './ShoppingCart.scss'
 import Summary from "../Summary";
 
 

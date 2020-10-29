@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
 import './static/styles/index.css'
-import './static/styles/common.css'
+import './static/styles/common.scss'
 import headphones from './static/images/headphones.png'
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
