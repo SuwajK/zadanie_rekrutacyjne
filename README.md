@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Requirements 
+Using prepared layout in [First task](https://github.com/SuwajK/zadanie_rekrutacyjne_1) add functionalities:
+- increasing and decreasing quantity of items using +/- buttons 
+- update sums after click on pencil or "Update Shopping Cart" button
+- shipment cost dependents on cost, for cost <= $100 shipment cost equals $23.80, for cost > $100 shipment is free 
+- Subtotal value is price of items (without shipment)
+- Grand Total is price items with shipment included
+- click on "Proceed to checkout" button hides shopping cart and shows "Your order has been submitted successfully" message
+- click on X button deletes item from cart and remove costs of this item
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
