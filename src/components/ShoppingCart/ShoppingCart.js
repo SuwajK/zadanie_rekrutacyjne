@@ -14,11 +14,11 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
 
   const updateItemQuantity = (itemName, quantity) => {
     setItems(prevState => {
-        return prevState.map(item => item.itemName === itemName
-          ? {...item, quantity: quantity}
-          : item
-        )
-      })
+      return prevState.map(item => item.itemName === itemName
+        ? {...item, quantity: quantity}
+        : item
+      )
+    })
   }
 
   const calculatePrices = () => {
@@ -67,6 +67,15 @@ const ShoppingCart = ({items, setItems, subTotalCost, setSubTotalCost, shippingC
       </aside>
     </div>
   );
+}
+
+ShoppingCart.defaultProps = {
+  items: [],
+  setItems: () => console.log('Please set setItems function.'),
+  subTotalCost: 0,
+  setSubTotalCost: 0,
+  shippingCost: 0,
+  nextStep: () => console.log('Please set nextStep function.')
 }
 
 export default ShoppingCart;

@@ -9,7 +9,7 @@ const CartItem = ({itemName, itemImage, price, quantity, updateQuantity, deleteI
   }
 
   const decreaseCount = () => {
-    /* Prevent from decreasing under 1*/
+    /* Prevent from decreasing under 1 */
     if (quantity > 1) {
       updateQuantity(itemName, quantity - 1)
     }
@@ -34,7 +34,7 @@ const CartItem = ({itemName, itemImage, price, quantity, updateQuantity, deleteI
     <tr className="shopping-cart__main__table__body__item-row">
       <td>
         <button className="btn-invisible" onClick={handleDelete}>
-        <img src={xImg} alt="Delete item"/>
+          <img src={xImg} alt="Delete item"/>
         </button>
       </td>
       <td>
@@ -52,13 +52,23 @@ const CartItem = ({itemName, itemImage, price, quantity, updateQuantity, deleteI
         />
         <button className="btn-edit" onClick={increaseCount}>+</button>
         <button className="btn-invisible" onClick={handleEditButtonClick}>
-        <img src={editImg}
-             alt="Edit"
-             className="shopping-cart__main__table__body__item-row__image"/>
+          <img src={editImg}
+               alt="Edit"
+               className="shopping-cart__main__table__body__item-row__image"/>
         </button>
       </td>
     </tr>
   )
+}
+
+CartItem.defaultProps = {
+  itemName: '',
+  itemImage: '',
+  price: 0,
+  quantity: 0,
+  updateQuantity: () => console.log('Please set updateQuantity function.'),
+  deleteItem: () => console.log('Please set deleteItem function.'),
+  calculatePrices: () => console.log('Please set calculatePrices function.'),
 }
 
 export default CartItem

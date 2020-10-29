@@ -31,4 +31,10 @@ const Summary = ({subTotalCost, shippingCost, nextStep}) => {
   )
 }
 
+Summary.defaultProps = {
+  subTotalCost: 0,
+  shippingCost: 0,
+  nextStep: () => console.log('Please set nextStep function.'),
+}
+
 export default Summary
