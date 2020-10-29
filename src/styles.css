@@ -108,6 +108,12 @@ body {
   font-weight: bold;
 }
 
+.btn-invisible {
+  outline: none;
+  background: none;
+  border: none;
+}
+
 .btn-edit {
   color: #000000;
   width: 35px;
